@@ -3,7 +3,7 @@
 const Banner = () => {
     return (
         <div className="hero md:min-h-[650px]" style={{ backgroundImage: 'url(public/Resources/donation.jpg)' }}>
-            <div className="hero-overlay bg-[#FFFFFFF2] bg-opacity-100"></div>
+            <div className=" hero-overlay bg-[#FFFFFFF2] bg-opacity-100"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-3xl">
                     <h1 className="mb-5 text-[#0B0B0B] text-2xl md:text-5xl font-bold">I Grow By Helping People In Need</h1>
