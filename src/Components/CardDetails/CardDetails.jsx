@@ -21,6 +21,7 @@ const CardDetails = () => {
         if(!donation){
             donatedTo.push(card)
             localStorage.setItem('donation',JSON.stringify(donatedTo))
+            toast('Donated successfully');
         }
         else{
 
@@ -30,6 +31,9 @@ const CardDetails = () => {
             donatedTo.push(...donation,card)
             localStorage.setItem('donation',JSON.stringify(donatedTo))
             toast('Donated successfully');
+            }
+            else{
+                toast.error('Cant donate in same category twice');
             }
             
         }
