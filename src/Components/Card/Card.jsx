@@ -7,7 +7,6 @@ const Card = ({ data }) => {
 
     const { id, picture, card_bg, category_bg, category, title, text_color } = data;
 
-    console.log(picture);
 
     return (
         <div>

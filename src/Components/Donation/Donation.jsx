@@ -11,7 +11,7 @@ const Donation = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-2 gap-6 lg:ml-36 items-center max-w-7xl">
+            <div className="grid md:grid-cols-2 gap-6 lg:ml-36 items-center max-w-7xl">
 
                 {
                     donation ?
@@ -28,8 +28,11 @@ const Donation = () => {
             </div>
             <div className="mx-auto items-center flex justify-center mt-10">
                 {
+                    !isSee &&
                     donation &&
-                    donation.length > 4 && <button onClick={() => setIsSee(!isSee)} className="btn btn-primary bg-[#009444] border-0 text-white">See all</button>
+                    donation.length > 4 && <button onClick={() => {
+                        setIsSee(true)
+                    }} className="btn btn-primary bg-[#009444] border-0 text-white">See all</button>
 
                 }
             </div>

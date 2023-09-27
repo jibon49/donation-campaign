@@ -42,9 +42,11 @@ const CardDetails = () => {
 
     return (
         <div className="lg:mt-14 lg:ml-36 md:max-w-7xl mb-5 p-4">
-            <div className="hero hero-overlay h-96 lg:h-[700px] items-end justify-start rounded-xl" style={{ backgroundImage: `url(${picture})` }}>
-                <div className="">
+            <div className="hero hero-overlay h-96 lg:h-[700px] items-end justify-start rounded-xl static" style={{ backgroundImage: `url(${picture})` }}>
+                <div className="w-full">
+                    <div>
                     <button  onClick={handleDonate} className="btn ml-9 mb-9" style={{ backgroundColor: text_color, color: "white", border: 0 }}>Donate ${price}</button>
+                    </div>
                 </div>
 
             </div>
