@@ -46,7 +46,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div>
-                        <img src="../../../public/Resources/Logo.png" alt="" />
+                        <img src="/Logo.png" alt="" />
                     </div>
                 </div>
                 <div className=" navbar-end hidden md:flex">

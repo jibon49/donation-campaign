@@ -18,36 +18,36 @@ const CardDetails = () => {
 
         const donation = JSON.parse(localStorage.getItem('donation'))
 
-        if(!donation){
+        if (!donation) {
             donatedTo.push(card)
-            localStorage.setItem('donation',JSON.stringify(donatedTo))
+            localStorage.setItem('donation', JSON.stringify(donatedTo))
             toast('Donated successfully');
         }
-        else{
+        else {
 
-            const isExist = donation.find(card=> card.id === intId)
+            const isExist = donation.find(card => card.id === intId)
 
-            if(!isExist){
-            donatedTo.push(...donation,card)
-            localStorage.setItem('donation',JSON.stringify(donatedTo))
-            toast('Donated successfully');
+            if (!isExist) {
+                donatedTo.push(...donation, card)
+                localStorage.setItem('donation', JSON.stringify(donatedTo))
+                toast('Donated successfully');
             }
-            else{
+            else {
                 toast.error('Cant donate in same category twice');
             }
-            
+
         }
 
     }
 
     return (
         <div className="lg:mt-14 lg:ml-36 md:max-w-7xl mb-5 p-4">
-            <div className="hero hero-overlay h-96 lg:h-[700px] items-end justify-start rounded-xl static" style={{ backgroundImage: `url(${picture})` }}>
-                <div className="w-full">
-                    <div>
-                    <button  onClick={handleDonate} className="btn ml-9 mb-9" style={{ backgroundColor: text_color, color: "white", border: 0 }}>Donate ${price}</button>
-                    </div>
+            <div className=" bg-cover h-96 lg:h-[700px]  justify-start rounded-xl flex items-end" style={{ backgroundImage: `url(${picture})` }}>
+
+                <div className="bg-[#0B0B0B80] p-2 w-full  rounded-b-lg">
+                    <button onClick={handleDonate} className="btn ml-9 my-4  " style={{ backgroundColor: text_color, color: "white", border: 0 }}>Donate ${price}</button>
                 </div>
+
 
             </div>
             <h1 className="text-4xl font-bold mt-14 mb-6">{title}</h1>
